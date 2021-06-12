@@ -49,6 +49,13 @@
     name: lynx
     state: present
 
+- name: Install mutt-wizard
+  aur:
+    name: mutt-wizard 
+    user: "{{ user.name }}"
+  tags:
+    - aur
+
 #- name: Install mutt-ics
 #  aur:
 #    name: mutt-ics
