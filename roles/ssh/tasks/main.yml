@@ -35,15 +35,20 @@
     name: autossh
     state: present
 
-- name: Copy fuse configuration file
-  copy:
-    src: fuse.conf
-    dest: /etc/fuse.conf
+#- name: Copy fuse configuration file
+#  copy:
+#    src: fuse.conf
+#    dest: /etc/fuse.conf
 
 - name: Install keychain
   pacman:
     name: keychain
     state: present
+
+#- name: Install Mosh
+#  pacman:
+#    name: mosh
+#    state: present
 
 - name: Install x11-ask-pass
   pacman:
@@ -72,7 +77,3 @@
     group: "{{ user.group }}"
   when: ssh.user_key is defined
 
-- name: Install Mosh
-  pacman:
-    name: mosh
-    state: present

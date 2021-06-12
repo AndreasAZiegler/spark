@@ -1,5 +1,2 @@
 ---
-- name: Install editors
-  pacman:
-    name: "{{ editors }}"
-    state: present
+-include: neovim.yml

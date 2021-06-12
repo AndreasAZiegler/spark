@@ -1,0 +1,7 @@
+---
+- name: Install ferdi
+  aur:
+    name: ferdi
+    user: "{{ user.name }}"
+  tags:
+    - aur

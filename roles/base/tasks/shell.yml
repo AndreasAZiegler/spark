@@ -8,11 +8,10 @@
   tags:
     - shell
 
-- name: Install ZSH
+- name: Install Fish
   pacman:
     name:
-      - zsh
-      - zsh-completions
+      - fish
     state: present
   tags:
     - shell

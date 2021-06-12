@@ -1,14 +1,15 @@
 user:
-    name: pigmonkey
-    uid: 1000
-    group: pigmonkey
-    shell: /usr/bin/zsh
-    email:  peter@havenaut.net
+    name: ziegler
+    uid: 101296
+    group: cs_staff
+    gid: 5011
+    shell: /usr/bin/fish
+    email:  andreas.ziegler@uni-tuebingen.de
     log:
         dir: log
         rotate: 8
 
-hostname: nous
+hostname: cs-lap09
 
 interception:
     caps2esc:
@@ -17,7 +18,7 @@ interception:
         delay: 20000
 
 dotfiles:
-    url: git@github.com:pigmonkey/dotfiles.git
+    url: git@github.com:AndreasAZiegler/dotfiles.git
     destination: projects/dotfiles
     rcup_flags: -fx README.md
 
@@ -31,10 +32,11 @@ aur:
         - myrepos
         - ctmg
         - spiped
+	- st
 
 ssh:
     port: 22
-    user_key: /root/id_rsa
+    user_key:
     enable_sshd: False
 
 gnupg:
@@ -61,7 +63,8 @@ network:
         - f74f2bd5-8748-4e1e-98f9-dae2dd44b916
 
 editors:
-    - gvim
+    #- gvim
+    - neovim
 
 video_drivers:
     - libva-intel-driver
@@ -71,29 +74,31 @@ base_packages:
     - man-db
     - man-pages
     - pacman-contrib
-    - fwupd
+    #- fwupd
     - dmidecode
-    - tmux
-    - git
     - rsync
     - coreutils
     - moreutils
     - dateutils
-    - bc
+    #- bc
     - ranger
     - arch-wiki-lite
     - arch-wiki-docs
-    - python-keyring
-    - python-secretstorage
-    - tig
-    - ruby
+    #- python-keyring
+    #- python-secretstorage
     - pv
-    - minicom
-    - jq
+    #- minicom
+    #- jq
     - screen
-    - termdown
-    - fzf
-    - cpulimit
+    #- termdown
+    #- fzf
+    #- cpulimit
+    - curl
+
+development_packages:
+    - git
+    - tig
+    #- tmux
 
 filesystem_packages:
     - dosfstools

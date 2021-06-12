@@ -4,10 +4,10 @@
     name: signal-desktop
     state: present
 
-- name: Jail signal-desktop
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/signal-desktop
-    state: link
-  tags:
-    - firejail
+#- name: Jail signal-desktop
+#  file:
+#    src: /usr/bin/firejail
+#    dest: /usr/local/bin/signal-desktop
+#    state: link
+#  tags:
+#    - firejail

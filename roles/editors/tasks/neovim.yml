@@ -1,0 +1,20 @@
+---
+- name: Install editors
+  pacman:
+    name: neovim
+    state: present
+
+- name: Install vundle
+  ansible.builtin.git:
+    repo: 'https://github.com/VundleVim/Vundle.vim.git'
+    dest: /home/{{ user.name }}/.vim/bundle/Vundle.vim
+
+- name: Install solarized for (n)vim
+  ansible.builtin.git:
+    repo: 'https://github.com/altercation/vim-colors-solarized.git'
+    dest: /home/{{ user.name }}/.vim/bundle
+
+- name: Install nodejs for coc.vim
+  pacman:
+    name: nodejs
+    state: present

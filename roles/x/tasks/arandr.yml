@@ -1,0 +1,5 @@
+---
+- name: Install arandr
+  pacman: arandr
+  tags:
+    - xdg

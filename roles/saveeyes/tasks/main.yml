@@ -1,0 +1,6 @@
+---
+- name: Install safeeyes
+  pacman:
+    name:
+      - safeeyes
+    state: present

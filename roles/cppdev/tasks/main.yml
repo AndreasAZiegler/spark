@@ -1,0 +1,27 @@
+---
+- name: Install gcc
+  pacman:
+      name: gcc
+      state: present
+
+- name: Install gdb
+  pacman:
+      name: gdb
+      state: present
+
+- name: Install valgrind
+  pacman:
+      name: valgrind
+      state: present
+
+- name: Install mozila rr
+  aur:
+    name: rr
+    user: "{{ user.name }}"
+  tags:
+    - aur
+
+- name: Install ccls
+  pacman:
+      name: ccls
+      state: present
