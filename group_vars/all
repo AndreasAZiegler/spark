@@ -11,6 +11,8 @@ user:
 
 hostname: cs-lap09
 
+repository_dir: /home/ziegler/repos
+
 interception:
     caps2esc:
         enabled: True
@@ -32,7 +34,7 @@ aur:
         - myrepos
         - ctmg
         - spiped
-	- st
+        - st
 
 ssh:
     port: 22
@@ -256,7 +258,7 @@ gdm:
         tap_to_click: True
     accessibility_menu: True
 
-desktop_environment: i3
+desktop_environment: dwm
 gnome:
     night_light:
         enabled: True

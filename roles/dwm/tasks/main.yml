@@ -1,0 +1,54 @@
+---
+- name: Get dwmblocks
+  ansible.builtin.git:
+    repo: 'https://github.com/AndreasAZiegler/dwmblocks.git'
+    dest: {{ repository_dir }}/dwmblocks
+
+- name: Run 'install' target as root
+  community.general.make:
+    chdir: {{ repository_dir }}/dwmblocks
+    target: install
+  become: yes
+
+- name: Get dmenu
+  ansible.builtin.git:
+    repo: 'https://github.com/LukeSmithxyz/dmenu.git'
+    dest: {{ repository_dir }}/dmenu
+
+- name: Run 'install' target as root
+  community.general.make:
+    chdir: {{ repository_dir }}/dmenu
+    target: install
+  become: yes
+
+- name: Install libxft-bgra
+  aur:
+    name: libxft-bgra
+    user: "{{ user.name }}"
+  tags:
+    - aur
+
+- name: Get dwm
+  ansible.builtin.git:
+    repo: 'https://github.com/AndreasAZiegler/dwm.git'
+    dest: {{ repository_dir }}/dwm
+
+- name: Run 'install' target as root
+  community.general.make:
+    chdir: {{ repository_dir }}/dwm
+    target: install
+  become: yes
+
+- name: Install py3status
+  pacman: name=py3status state=present
+
+- name: Verify that default applications file exists
+  file: path=/etc/xdg/mimeapps.list state=touch
+
+- name: Verify header in default applications file
+  lineinfile: dest=/etc/xdg/mimeapps.list
+              state=present
+              line='[Default Applications]'
+              insertbefore=BOF
+
+- include: rofi.yml
