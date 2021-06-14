@@ -1,17 +1,17 @@
 user:
-    name: ziegler
-    uid: 101296
-    group: cs_staff
-    gid: 5011
+    name: andreasziegler
+    uid: 1000
+    group: andreasziegler
+    gid: 1000
     shell: /usr/bin/fish
-    email:  andreas.ziegler@uni-tuebingen.de
+    email:  062.127@gmail.com
     log:
         dir: log
         rotate: 8
 
-hostname: cs-lap09
+hostname: ZLT01
 
-repository_dir: /home/ziegler/repos
+repository_dir: /data/repos
 
 interception:
     caps2esc:
@@ -38,7 +38,7 @@ aur:
 
 ssh:
     port: 22
-    user_key:
+    user_key: False
     enable_sshd: False
 
 gnupg:
