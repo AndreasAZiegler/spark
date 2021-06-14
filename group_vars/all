@@ -3,7 +3,7 @@ user:
     uid: 101296
     group: cs_staff
     gid: 5011
-    shell: /usr/bin/fish
+    shell: /usr/bin/bash
     email:  andreas.ziegler@uni-tuebingen.de
     log:
         dir: log
