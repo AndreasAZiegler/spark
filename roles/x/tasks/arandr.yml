@@ -1,5 +1,5 @@
 ---
 - name: Install arandr
-  pacman: arandr
+  pacman: name=arandr state=present
   tags:
     - xdg

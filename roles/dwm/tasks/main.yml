@@ -1,23 +1,27 @@
 ---
+- name: Install otf-font-awesome
+  pacman: name=otf-font-awesome state=present
+
 - name: Get dwmblocks
   ansible.builtin.git:
     repo: 'https://github.com/AndreasAZiegler/dwmblocks.git'
-    dest: {{ repository_dir }}/dwmblocks
+    version: own_config
+    dest: "~/.local/src/dwmblocks"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: {{ repository_dir }}/dwmblocks
+    chdir: "~/.local/src/dwmblocks"
     target: install
   become: yes
 
 - name: Get dmenu
   ansible.builtin.git:
     repo: 'https://github.com/LukeSmithxyz/dmenu.git'
-    dest: {{ repository_dir }}/dmenu
+    dest: "~/.local/src/dmenu"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: {{ repository_dir }}/dmenu
+    chdir: "~/.local/src/dmenu"
     target: install
   become: yes
 
@@ -28,16 +32,33 @@
   tags:
     - aur
 
-- name: Get dwm
+- name: Get st
   ansible.builtin.git:
-    repo: 'https://github.com/AndreasAZiegler/dwm.git'
-    dest: {{ repository_dir }}/dwm
+    repo: 'https://github.com/LukeSmithxyz/st.git'
+    dest: "~/.local/src/st"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: {{ repository_dir }}/dwm
+    chdir: "~/.local/src/st"
     target: install
   become: yes
 
-- name: Install backitup
-  copy: src=dwm.desktop dest=usr/share/xsessions/dwm.desktop
+- name: Get dwm
+  ansible.builtin.git:
+    repo: 'https://github.com/AndreasAZiegler/dwm.git'
+    version: own_config
+    dest: "~/.local/src/dwm"
+
+- name: Run 'install' target as root
+  community.general.make:
+    chdir: "~/.local/src/dwm"
+    target: install
+  become: yes
+
+- name: Create xsessions profile directory
+  file:
+    path: /usr/share/xsessions
+    state: directory
+
+- name: Install dwm session profile
+  copy: src=dwm.desktop dest=/usr/share/xsessions/dwm.desktop

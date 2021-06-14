@@ -1,2 +1,2 @@
 ---
--include: neovim.yml
+- include: neovim.yml

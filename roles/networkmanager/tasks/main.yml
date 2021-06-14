@@ -32,7 +32,11 @@
       enabled: yes
       state: started
 
-- name: Disable dhcpcd service
-  service:
-      name: dhcpcd.service
-      enabled: no
+#- name: Populate service facts
+#  ansible.builtin.service_facts:
+
+#- name: Stop dhcpcd service
+#  service:
+#    name: dhcpcd
+#    state: stopped 
+#  when: ansible_facts.services.dhcpcd != "VARIABLE IS NOT DEFINED!"

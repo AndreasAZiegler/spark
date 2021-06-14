@@ -36,8 +36,11 @@
 #    name: urlscan
 
 - name: Install urlview
-  pacman:
-    name: urlview
+  aur:
+    name: urlview 
+    user: "{{ user.name }}"
+  tags:
+    - aur
 
 - name: Install notmuch
   pacman:

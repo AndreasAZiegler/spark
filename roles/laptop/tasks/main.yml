@@ -47,9 +47,10 @@
   tags:
     - aur
 
-- name: Install battop
-  aur:
-    name: battop
-    user: "{{ user.name }}"
-  tags:
-    - aur
+# Activate when package builds again
+#- name: Install battop
+#  aur:
+#    name: battop
+#    user: "{{ user.name }}"
+#  tags:
+#    - aur

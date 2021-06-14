@@ -9,6 +9,11 @@
       name: gdb
       state: present
 
+- name: Install ccache
+  pacman:
+      name: ccache
+      state: present
+
 - name: Install valgrind
   pacman:
       name: valgrind

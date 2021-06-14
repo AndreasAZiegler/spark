@@ -68,6 +68,11 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
 
+- name: Print variable
+  ansible.builtin.debug:
+    msg: ssh user key {{ ssh.user_key }}
+  when: ssh.user_key is defined and ssh.user_key != False
+
 - name: Install user SSH key
   copy:
     src: "{{ ssh.user_key }}"
@@ -75,5 +80,5 @@
     mode: 600
     owner:  "{{ user.name }}"
     group: "{{ user.group }}"
-  when: ssh.user_key is defined
+  when: ssh.user_key is defined and ssh.user_key != False
 

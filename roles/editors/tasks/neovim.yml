@@ -12,7 +12,7 @@
 - name: Install solarized for (n)vim
   ansible.builtin.git:
     repo: 'https://github.com/altercation/vim-colors-solarized.git'
-    dest: /home/{{ user.name }}/.vim/bundle
+    dest: /home/{{ user.name }}/.vim/bundle/vim-colors-solarized
 
 - name: Install nodejs for coc.vim
   pacman:

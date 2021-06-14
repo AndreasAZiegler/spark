@@ -4,7 +4,7 @@
     name: openresolv
     state: present
 
-- name: Push resolvconf.conf
-  template:
-    src: resolvconf.conf.j2
-    dest: /etc/resolvconf.conf
+#- name: Push resolvconf.conf
+#  template:
+#    src: resolvconf.conf.j2
+#    dest: /etc/resolvconf.conf
