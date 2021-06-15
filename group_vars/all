@@ -9,9 +9,9 @@ user:
         dir: log
         rotate: 8
 
-hostname: cs-lap09
+hostname: ZLT01
 
-repository_dir: /home/ziegler/repos
+repository_dir: /data/repos
 
 interception:
     caps2esc:
@@ -20,7 +20,7 @@ interception:
         delay: 20000
 
 dotfiles:
-    url: git@github.com:AndreasAZiegler/dotfiles.git
+    url: https://github.com/AndreasAZiegler/dotfiles.git
     destination: projects/dotfiles
     rcup_flags: -fx README.md
 
@@ -38,7 +38,7 @@ aur:
 
 ssh:
     port: 22
-    user_key:
+    user_key: False
     enable_sshd: False
 
 gnupg:
