@@ -11,7 +11,7 @@ user:
 
 hostname: ZLT01
 
-repository_dir: /data/repos
+repository_dir: /home/ziegler/repos
 
 interception:
     caps2esc:
