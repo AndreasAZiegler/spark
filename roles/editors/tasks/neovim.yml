@@ -22,3 +22,8 @@
   pacman:
     name: nodejs
     state: present
+
+- name: Install yarn for coc.vim
+  pacman:
+    name: yarn
+    state: present
