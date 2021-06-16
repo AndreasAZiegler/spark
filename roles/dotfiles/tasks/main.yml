@@ -7,7 +7,7 @@
 
 - name: Clone user dotfiles
   git:
-    repo: {{ dotfiles.url }}
+    repo: "{{ dotfiles.url }}"
     version: work
     dest: /home/{{ user.name }}/{{ dotfiles.destination }}
     accept_hostkey: yes
