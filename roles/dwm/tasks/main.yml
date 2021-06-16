@@ -2,26 +2,37 @@
 - name: Install otf-font-awesome
   pacman: name=otf-font-awesome state=present
 
+- name: Create /home/{{ user.name }}/.local/src if it does not exist
+  ansible.builtin.file:
+    path: /home/{{ user.name }}/.local/src
+    state: directory
+    mode: '0755'
+
 - name: Get dwmblocks
   ansible.builtin.git:
     repo: 'https://github.com/AndreasAZiegler/dwmblocks.git'
     version: own_config
-    dest: "~/.local/src/dwmblocks"
+    dest: "/home/{{ user.name }}/.local/src/dwmblocks"
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: "~/.local/src/dwmblocks"
+    chdir: "/home/{{ user.name }}/.local/src/dwmblocks"
     target: install
   become: yes
+  become_user: "{{ user.name }}"
 
 - name: Get dmenu
   ansible.builtin.git:
     repo: 'https://github.com/LukeSmithxyz/dmenu.git'
-    dest: "~/.local/src/dmenu"
+    dest: "/home/{{ user.name }}/.local/src/dmenu"
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: "~/.local/src/dmenu"
+    chdir: "/home/{{ user.name }}/.local/src/dmenu"
     target: install
   become: yes
 
@@ -34,12 +45,15 @@
 
 - name: Get st
   ansible.builtin.git:
-    repo: 'https://github.com/LukeSmithxyz/st.git'
-    dest: "~/.local/src/st"
+    repo: 'https://github.com/AndreasAZiegler/st.git'
+    version: own_config
+    dest: "/home/{{ user.name }}/.local/src/st"
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: "~/.local/src/st"
+    chdir: "/home/{{ user.name }}/.local/src/st"
     target: install
   become: yes
 
@@ -47,11 +61,13 @@
   ansible.builtin.git:
     repo: 'https://github.com/AndreasAZiegler/dwm.git'
     version: own_config
-    dest: "~/.local/src/dwm"
+    dest: "/home/{{ user.name }}/.local/src/dwm"
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Run 'install' target as root
   community.general.make:
-    chdir: "~/.local/src/dwm"
+    chdir: "/home/{{ user.name }}/.local/src/dwm"
     target: install
   become: yes
 

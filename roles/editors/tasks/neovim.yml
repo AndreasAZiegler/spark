@@ -8,11 +8,15 @@
   ansible.builtin.git:
     repo: 'https://github.com/VundleVim/Vundle.vim.git'
     dest: /home/{{ user.name }}/.vim/bundle/Vundle.vim
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Install solarized for (n)vim
   ansible.builtin.git:
     repo: 'https://github.com/altercation/vim-colors-solarized.git'
     dest: /home/{{ user.name }}/.vim/bundle/vim-colors-solarized
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Install nodejs for coc.vim
   pacman:
