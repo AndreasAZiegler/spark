@@ -7,6 +7,8 @@
     path: /home/{{ user.name }}/.local/src
     state: directory
     mode: '0755'
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Get dwmblocks
   ansible.builtin.git:

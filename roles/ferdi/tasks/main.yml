@@ -1,7 +1,7 @@
 ---
 - name: Install ferdi
   aur:
-    name: ferdi
+    name: ferdi-bin
     user: "{{ user.name }}"
   tags:
     - aur

@@ -96,6 +96,7 @@ base_packages:
     #- fzf
     #- cpulimit
     - curl
+    - mlocate
 
 development_packages:
     - git
