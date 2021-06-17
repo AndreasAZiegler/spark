@@ -27,3 +27,13 @@
   pacman:
     name: yarn
     state: present
+
+- name: Install yarn texlab coc.vim
+  pacman:
+    name: texlab
+    state: present
+
+- name: Install xclip
+  pacman:
+    name: xclip
+    state: present
