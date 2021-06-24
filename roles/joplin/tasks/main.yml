@@ -1,7 +1,7 @@
 ---
-- name: Install safeeyes
+- name: Install joplin
   aur:
-    name: safeeyes
+    name: joplin
     user: "{{ user.name }}"
   tags:
     - aur
