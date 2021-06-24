@@ -1,6 +1,7 @@
 ---
 - name: Install safeeyes
-  pacman:
-    name:
-      - safeeyes
-    state: present
+  aur:
+    name: safeeyes
+    user: "{{ user.name }}"
+  tags:
+    - aur
