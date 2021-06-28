@@ -8,9 +8,9 @@
 - name: Clone user dotfiles
   git:
     repo: "{{ dotfiles.url }}"
-    dest: {{ repository_dir }}/dotfiles
-    accept_hostkey=yes
-    update=no
+    dest: "{{ repository_dir }}/dotfiles"
+    accept_hostkey: yes
+    update: no
   when: dotfiles is defined
   become: yes
   become_user: "{{ user.name }}"
