@@ -1,0 +1,5 @@
+---
+- name: Install tk (for gitk)
+  pacman:
+    name: tk
+    state: present
