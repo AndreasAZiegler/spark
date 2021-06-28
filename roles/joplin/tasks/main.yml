@@ -1,0 +1,7 @@
+---
+- name: Install joplin
+  aur:
+    name: joplin
+    user: "{{ user.name }}"
+  tags:
+    - aur
