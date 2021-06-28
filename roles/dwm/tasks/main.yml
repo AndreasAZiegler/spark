@@ -23,7 +23,6 @@
     chdir: "/home/{{ user.name }}/.local/src/dwmblocks"
     target: install
   become: yes
-  become_user: "{{ user.name }}"
 
 - name: Get dmenu
   ansible.builtin.git:
