@@ -3,3 +3,8 @@
   pacman:
     name: tk
     state: present
+
+- name: Install git
+  pacman:
+      name: git
+      state: present
