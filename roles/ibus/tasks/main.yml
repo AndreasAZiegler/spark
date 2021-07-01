@@ -1,0 +1,6 @@
+---
+- name: Install ibus
+  pacman: name=ibus state=present
+
+- name: Install ibus-hangul
+  pacman: name=ibus-hangul state=present

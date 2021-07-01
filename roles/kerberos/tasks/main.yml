@@ -1,0 +1,18 @@
+---
+- name: Install pam
+  pacman: name=pam state=present
+
+- name: Install pambase
+  pacman: name=pambase state=present
+
+- name: Install krb5
+  pacman: name=krb5 state=present
+
+- name: Install pam-krb5
+  pacman: name=pam-krb5 state=present
+
+- name: Install ldap
+  pacman: name=openldap state=present
+
+- name: Install samba
+  pacman: name=samba state=present

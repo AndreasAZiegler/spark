@@ -4,6 +4,11 @@
     name: alsa-utils
     state: present
 
+- name: Install pavucontrol
+  pacman:
+    name: pavucontrol
+    state: present
+
 #- name: Install PulseAudio
 #  pacman:
 #    name:

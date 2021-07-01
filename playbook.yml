@@ -19,17 +19,19 @@
     #- { role: gdm, tags: ['gdm'], when: "display_manager == 'gdm'" }
     #- { role: i3, tags: ['i3'], when: "desktop_environment == 'i3'" }
     - { role: dwm, tags: ['dwm'], when: "desktop_environment == 'dwm'" }
+    - { role: fileexplorers, tags: ['fileexplorers'] }
     #- { role: gnome, tags: ['gnome'], when: "desktop_environment == 'gnome'" }
     - { role: pass, tags: ['pass'] }
     #- { role: iptables, tags: ['iptables'] }
     - { role: nettools, tags: ['nettools'] }
+    #- { role: kerberos, tags: ['kerberos'] }
     - { role: nextcloud, tags: ['nextcloud'] }
     #- { role: nmtrust, tags: ['nmtrust'] }
     #- { role: unbound, tags: ['unbound'] }
     - { role: openresolv, tags: ['openresolv'] }
     - { role: networkmanager, tags: ['networkmanager'] }
     #- { role: macchiato, tags: ['macchiato'] }
-    #- { role: ntp, tags: ['ntp'] }
+    - { role: ntp, tags: ['ntp'] }
     #- { role: firejail, tags: ['firejail'] }
     - { role: tor, tags: ['tor'], when: "tor is defined" }
     - { role: editors, tags: ['editors'] }
@@ -61,6 +63,7 @@
     - { role: pdf, tags: ['pdf'] }
     #- { role: dictd, tags: ['dictd'] }
     - { role: redshift, tags: ['redshift'] }
+    - { role: safeeyes, tags: ['safeeyes'] }
     #- { role: rtorrent, tags: ['rtorrent'] }
     #- { role: virtualbox, tags: ['virtualbox'] }
     #- { role: hashicorp, tags: ['hashicorp'] }
@@ -90,6 +93,7 @@
     #- { role: units, tags: ['units'], when: "units is defined" }
     - { role: logitech, tags: ['logitech'] }
     - { role: git, tags: ['git'] }
+    - { role: docker, tags: ['docker'] }
     - { role: pydev, tags: ['pydev'] }
     - { role: cppdev, tags: ['cppdev'] }
     #- { role: aria2, tags: ['aria2'] }
