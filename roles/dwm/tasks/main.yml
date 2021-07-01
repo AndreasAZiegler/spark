@@ -22,7 +22,6 @@
   community.general.make:
     chdir: "/home/{{ user.name }}/.local/src/dwmblocks"
     target: install
-  become: yes
 
 - name: Get dmenu
   ansible.builtin.git:
@@ -35,7 +34,6 @@
   community.general.make:
     chdir: "/home/{{ user.name }}/.local/src/dmenu"
     target: install
-  become: yes
 
 - name: Install libxft-bgra
   aur:
@@ -56,7 +54,6 @@
   community.general.make:
     chdir: "/home/{{ user.name }}/.local/src/st"
     target: install
-  become: yes
 
 - name: Get dwm
   ansible.builtin.git:
@@ -70,7 +67,6 @@
   community.general.make:
     chdir: "/home/{{ user.name }}/.local/src/dwm"
     target: install
-  become: yes
 
 - name: Create xsessions profile directory
   file:
