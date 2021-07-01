@@ -1,0 +1,6 @@
+---
+- name: Install pcmanfm
+  pacman: name=pcmanfm state=present
+
+- name: Install nnn
+  pacman: name=nnn state=present

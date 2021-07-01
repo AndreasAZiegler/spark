@@ -1,0 +1,13 @@
+---
+- name: Install docker
+  pacman: name=docker state=present
+
+- name: Install nvidia-container-toolkit
+  aur: name=nvidia-container-toolkit user={{ user.name }}
+  when: dotfiles is defined
+  tags:
+    - aur
+
+- name: Install rocker
+  pip:
+    name: rocker

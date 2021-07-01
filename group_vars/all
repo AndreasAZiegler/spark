@@ -107,6 +107,7 @@ filesystem_packages:
     - dosfstools
     - ntfs-3g
     - exfat-utils
+    - nfs-utils
 
 browser_choices:
     - firefox -P default

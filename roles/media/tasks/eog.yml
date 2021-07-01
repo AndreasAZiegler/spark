@@ -1,0 +1,3 @@
+---
+- name: Install eog
+  pacman: name=eog state=present

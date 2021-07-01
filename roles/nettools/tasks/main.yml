@@ -1,4 +1,7 @@
 ---
+- name: Install wget
+  pacman: name=wget state=present
+
 - name: Install OpenVPN
   pacman: name=openvpn state=present
 

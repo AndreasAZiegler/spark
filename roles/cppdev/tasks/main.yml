@@ -30,3 +30,8 @@
   pacman:
       name: ccls
       state: present
+
+- name: Install meld
+  pacman:
+      name: meld
+      state: present
