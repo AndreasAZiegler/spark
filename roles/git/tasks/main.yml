@@ -1,10 +1,10 @@
 ---
+- name: Install tk (for gitk)
+  pacman:
+    name: tk
+    state: present
+
 - name: Install git
   pacman:
       name: git
-      state: present
-
-- name: Install tk (for gitk)
-  pacman:
-      name: tk
       state: present
