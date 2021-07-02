@@ -1,0 +1,7 @@
+---
+- name: Install safeeyes
+  aur:
+    name: safeeyes
+    user: "{{ user.name }}"
+  tags:
+    - aur
