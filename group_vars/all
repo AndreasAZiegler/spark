@@ -9,9 +9,9 @@ user:
         dir: log
         rotate: 8
 
-hostname: ZLT01
+hostname: cs-ws07
 
-repository_dir: /home/ziegler/repos
+repository_dir: /data/repos
 
 interception:
     caps2esc:
