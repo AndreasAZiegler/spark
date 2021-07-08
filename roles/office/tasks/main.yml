@@ -51,16 +51,6 @@
       - pandoc
     state: present
 
-- name: Install texlive-core
-  pacman:
-    name: texlive-core
-    state: present
-
-- name: Install texlive-latexextra
-  pacman:
-    name: texlive-latexextra
-    state: present
-
 - name: Install zotero
   aur:
     name:

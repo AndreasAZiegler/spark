@@ -58,6 +58,7 @@
     - { role: mail, tags: ['mail'] }
     - { role: cups, tags: ['cups'] }
     - { role: office, tags: ['office'] }
+    - { role: latex, tags: ['latex'] }
     - { role: joplin, tags: ['joplin'] }
     #- { role: visidata, tags: ['visidata'] }
     - { role: pdf, tags: ['pdf'] }
