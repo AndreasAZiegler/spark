@@ -35,6 +35,7 @@ aur:
         - ctmg
         - spiped
         - st
+        - nnn-nerd
 
 ssh:
     port: 22
@@ -97,6 +98,7 @@ base_packages:
     #- cpulimit
     - curl
     - mlocate
+    - lsd
 
 development_packages:
     - git
@@ -323,6 +325,7 @@ aur_fonts:
     - ttf-oswald
     - ttf-quintessential
     - ttf-signika
+    - nerd-fonts-jetbrains-mono
 
 syncthing:
     run_on: trusted
