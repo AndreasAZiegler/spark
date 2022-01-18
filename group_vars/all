@@ -16,7 +16,7 @@ repository_dir: /data/repos
 interception:
     caps2esc:
         enabled: True
-        mode: 1
+        mode: 0
         delay: 20000
 
 dotfiles:
