@@ -1,7 +1,7 @@
 ---
 - name: Install joplin
   aur:
-    name: joplin
+    name: joplin-appimage
     user: "{{ user.name }}"
   tags:
     - aur
