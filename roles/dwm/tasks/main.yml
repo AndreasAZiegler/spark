@@ -42,6 +42,9 @@
   tags:
     - aur
 
+- name: Install dunst
+  pacman: name=dunst state=present
+
 - name: Get st
   ansible.builtin.git:
     repo: 'https://github.com/AndreasAZiegler/st.git'

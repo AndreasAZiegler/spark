@@ -9,6 +9,11 @@
     name: pavucontrol
     state: present
 
+- name: Install pamixer
+  pacman:
+    name: pamixer
+    state: present
+
 #- name: Install PulseAudio
 #  pacman:
 #    name:
